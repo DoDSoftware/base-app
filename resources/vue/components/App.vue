@@ -3,6 +3,26 @@
     <Dialog header="Header" v-model:visible="dialogVisible" >
         Content
     </Dialog>
+
+
+    <TabView>
+        <TabPanel>
+            <template #header>
+                <i class="pi pi-calendar"></i>
+                <span>Header I</span>
+            </template>
+            Content I
+        </TabPanel>
+        <TabPanel>
+            <template #header>
+                <span>Header II</span>
+                <i class="pi pi-user"></i>
+            </template>
+            Content II
+        </TabPanel>
+    </TabView>
+
+
 </template>
 <script>
 import { ref } from "vue";
