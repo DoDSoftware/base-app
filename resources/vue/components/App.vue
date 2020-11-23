@@ -1,5 +1,6 @@
 <template>
     <button @click="toggleModalState">Open modal</button>
+    <Dialog></Dialog>
     <teleport to="#modal-wrapper">
         <modal v-if="modalOpen">
             <p>Hello, I'm a modal window.</p>
