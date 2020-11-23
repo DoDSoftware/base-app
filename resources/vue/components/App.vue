@@ -1,28 +1,26 @@
 <template>
-    <button @click="toggleModalState">Open modal</button>
-    <Dialog></Dialog>
-    <teleport to="#modal-wrapper">
-        <modal v-if="modalOpen">
-            <p>Hello, I'm a modal window.</p>
-        </modal>
-    </teleport>
+    <Button icon="pi pi-external-link" label="Open Dialog" @click="dialogVisible = !dialogVisible"></Button>
+    <Dialog header="Header" v-model:visible="dialogVisible" >
+        Content
+    </Dialog>
 </template>
 <script>
-import Modal from "./Modal.vue";
 import { ref } from "vue";
 export default {
     setup () {
         const modalOpen = ref(false);
+        const dialogVisible = ref(false);
         const toggleModalState = () => {
             modalOpen.value = !modalOpen.value;
         };
         return {
             modalOpen,
-            toggleModalState
+            toggleModalState,
+            dialogVisible
         }
     },
     components: {
-        Modal
+
     }
 };
 </script>

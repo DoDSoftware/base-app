@@ -23,11 +23,7 @@
         </style>
     </head>
     <body>
-    ...
     <div id="app"></div><!--Vue mounting element-->
-    <div id="modal-wrapper">
-        <!--modal should get moved here-->
-    </div>
     <script src="{{ mix('/js/app.js') }}"></script>
 
     </body>
